@@ -1,6 +1,6 @@
 # Bank App
 
-Works like a bank account would, allowing you to desposit/withdraw money, see your balance, and see the the date and time of any tranactions.
+This is a bank account app that allows you to desposit/withdraw money, see your balance, and see the the date and time of any tranactions.
 
 # Setup
 
