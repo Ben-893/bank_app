@@ -6,5 +6,10 @@ def initialize
 @transactions = []
 end
 
+def deposit(amount)
+@balance += amount
+end
+
+
 
 end
