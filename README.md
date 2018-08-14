@@ -9,5 +9,3 @@ This is a bank account app that allows you to desposit/withdraw money, see your 
 2. bundle install
 
 # To Use
-
-Open IRB and type: irb -r ./lib/account.rb
