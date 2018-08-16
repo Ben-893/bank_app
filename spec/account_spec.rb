@@ -15,10 +15,15 @@ describe 'withdraw' do
 end
 
 describe 'transactions' do
-  it 'is an empty array' do
+  it 'adds a transaction to the array when depositing' do
     expect(subject.transactions).to be_empty
     subject.deposit(50)
     expect(subject.transactions).to_not be_empty
-    end
+  end
+end
+  it 'adds a transaction to the array when withdrawing' do
+    expect(subject.transactions).to be_empty
+    subject.withdraw(50)
+    expect(subject.transactions).to_not be_empty
   end
 end
