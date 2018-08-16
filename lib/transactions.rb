@@ -5,5 +5,4 @@ def initialize(amount)
 @amount = amount
 @time = Time.now.strftime('%m/%d/%Y')
 end
-
 end
