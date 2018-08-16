@@ -13,4 +13,10 @@ describe 'withdraw' do
     expect { subject.withdraw(50) }.to change { subject.balance }.by(-50)
     end
   end
+
+describe 'transactions' do
+  it 'is an empty array' do
+    expect(subject.transactions).to be_empty
+    end
+  end
 end
