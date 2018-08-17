@@ -1,4 +1,5 @@
 require './lib/transactions'
+require 'byebug'
 
 class Account
   attr_reader :balance, :transactions
@@ -14,6 +15,7 @@ class Account
   end
 
   def withdraw(amount)
+    fail "Not enough credit" if @balance < amount
     @balance -= amount
     @transactions << Transaction.new(amount)
   end
