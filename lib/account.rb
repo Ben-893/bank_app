@@ -1,5 +1,4 @@
 require './lib/transactions'
-require 'byebug'
 
 class Account
   attr_reader :balance, :transactions
@@ -22,5 +21,12 @@ class Account
 
   def print_balance
    "£#{@balance}"
+  end
+
+  def print_transactions
+    @transactions.each do |transaction|
+      return "Amount: #{transaction.amount},
+      Date: #{transaction.time}"
+    end
   end
 end

@@ -33,7 +33,14 @@ end
 
   describe 'Balance too low' do
     it 'raises an error when someone wants to withdraw an amount larger than the balance' do
-    expect { subject.withdraw(50) }.to raise_error "Not enough credit"
+      expect { subject.withdraw(50) }.to raise_error "Not enough credit"
+    end
+  end
+
+  describe 'print_transactions' do
+    it 'prints a list of transactions' do
+      subject.deposit(50)
+      expect(subject.print_transactions).to eq "Amount: 50,\n      Date: 08/17/2018"
     end
   end
 end
