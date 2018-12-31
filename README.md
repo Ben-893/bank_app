@@ -7,6 +7,7 @@ This is a bank account app that allows you to desposit/withdraw money, see your 
 ## Setup
 
 ```
+git clone https://github.com/Ben-893/bank_app.git && cd bank_app
 gem install bundler
 bundle install
 ```
