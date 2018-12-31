@@ -15,7 +15,7 @@ describe 'withdraw' do
     expect { subject.withdraw(50) }.to change { subject.balance }.by(-50)
   end
 end
-
+#remove transaction tests
 describe 'transactions' do
   it 'adds a transaction to the array when depositing' do
     expect(subject.transactions).to be_empty
@@ -37,10 +37,10 @@ end
     end
   end
 
-  describe 'print_transactions' do
-    it 'prints a list of transactions' do
+  describe 'Print balance' do
+    it 'Prints the balance' do
       subject.deposit(50)
-      expect(subject.print_transactions).to eq "Amount: 50,\n      Date: 08/17/2018"
+      expect(subject.print_balance).to eq ("£50")
     end
   end
 end

@@ -10,13 +10,13 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @transactions << Transaction.new(amount)
+    @transactions << Transaction.new(amount, 0, @balance)
   end
 
   def withdraw(amount)
     fail "Not enough credit" if @balance < amount
     @balance -= amount
-    @transactions << Transaction.new(amount)
+    @transactions << Transaction.new(0, amount, @balance)
   end
 
   def print_balance
@@ -24,9 +24,9 @@ class Account
   end
 
   def print_transactions
+    puts "date || credit || debit || balance" + "\n"
     @transactions.each do |transaction|
-      return "Amount: #{transaction.amount},
-      Date: #{transaction.time}"
+      puts "#{transaction.time} || #{transaction.credit} || #{transaction.debit} || #{transaction.balance}"
     end
   end
 end

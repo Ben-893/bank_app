@@ -10,4 +10,6 @@ This is a bank account app that allows you to desposit/withdraw money, see your 
 
 # To Use
 
-require './lib/account.rb'
+1. require './lib/account.rb'
+2. account = Account.new
+3. Call the methods on 'account'
