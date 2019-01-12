@@ -100,10 +100,10 @@
         1,
         null,
         1,
-        10,
-        10,
-        10,
-        10,
+        14,
+        14,
+        14,
+        14,
         null,
         null
       ],
@@ -155,8 +155,35 @@
         null,
         null,
         null
+      ],
+      "/Users/ben.smith.gordon/Desktop/bank_app/spec/transactions_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        5,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1547319053
+    "timestamp": 1547320814
   }
 }
