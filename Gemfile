@@ -6,3 +6,4 @@ gem 'rspec'
 gem 'byebug'
 gem 'simplecov', require: false, group: :test
 gem 'simplecov-console', require: false
+gem 'timecop'

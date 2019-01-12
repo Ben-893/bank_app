@@ -19,10 +19,20 @@ describe Account do
     end
   end
 
-  describe 'balance' do
+  describe 'print_balance' do
     it 'it prints the balance' do
       account.deposit(50)
-      expect(account.print_balance).to eq "£#{50}"
+      expect(STDOUT).to receive(:puts).with("£50")
+      account.print_balance
+    end
+  end
+
+  describe 'print_transactions' do
+    it 'it prints the balance' do
+      allow(Time).to receive(:now).and_return(Time.new('2019-01-01'))
+      account.deposit(50)
+      expect(STDOUT).to receive(:puts).with(["date || credit || debit || balance\n", "01/01/2019 || 50 || 0 || 50"])
+      account.print_transactions
     end
   end
 

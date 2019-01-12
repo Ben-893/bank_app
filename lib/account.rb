@@ -26,9 +26,6 @@ class Account
   end
 
   def print_transactions
-    puts "date || credit || debit || balance" + "\n"
-    @transactions.each do |transaction|
-      puts "#{transaction.time} || #{transaction.credit} || #{transaction.debit} || #{transaction.balance}"
-    end
+    @printer.transactions(@transactions)
   end
 end
