@@ -10,15 +10,19 @@ class Account
     @transactions = []
   end
 
-  def deposit(amount)
+  def deposit(amount, transaction)
     @balance += amount
-    @transactions << Transaction.new(amount, 0, @balance)
+    transaction.credit = amount
+    transaction.balance = @balance
+    @transactions << transaction
   end
 
-  def withdraw(amount)
+  def withdraw(amount, transaction)
     fail "Not enough credit" if @balance < amount
     @balance -= amount
-    @transactions << Transaction.new(0, amount, @balance)
+    transaction.debit = amount
+    transaction.balance = @balance
+    @transactions << transaction
   end
 
   def print_balance

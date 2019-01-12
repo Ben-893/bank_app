@@ -17,14 +17,15 @@ bundle install
 ```
 irb
 require './lib/account.rb'
-account = Account.new
+account = Account.new(Printer.new)
 Call the methods on 'account'
 ```
 
 ## List of Commands: 
 - Create a new account: `account = Account.new`
-- Make a deposit: `account.deposit(amount)`
-- Make a withdrawal: `account.withdraw(amount)`
+- Make a deposit: `account.deposit(amount, Transaction.new(50, 0))`
+- Make a withdrawal: `account.deposit(amount, Transaction.new(0, 50))`
+- See your account balance: `account.print_balance`
 - See your transaction history: `account.print_transactions`
 
 ## Requirements
