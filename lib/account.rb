@@ -1,9 +1,11 @@
 require './lib/transactions'
+require './lib/printer'
 
 class Account
   attr_reader :balance, :transactions
 
-  def initialize
+  def initialize(printer)
+    @printer = printer
     @balance = 0
     @transactions = []
   end
@@ -20,7 +22,7 @@ class Account
   end
 
   def print_balance
-   "£#{@balance}"
+    @printer.balance(@balance)
   end
 
   def print_transactions
